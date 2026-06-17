@@ -10,7 +10,7 @@ Engineered & Developed by Nabil Khondaker.
 This engine is architected using enterprise-grade modular principles to decouple global configurations, mesh generation, finite element solvers, and mathematical optimization filters.
 
 ```text
-TopologyOptimizationEngine/
+FEAGenerative/
 │
 ├── run_optimization.py             # Master execution script tying the engine together
 │
