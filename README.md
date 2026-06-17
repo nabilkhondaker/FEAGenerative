@@ -2,6 +2,7 @@
 
 Built a 2D generative design engine from scratch to figure out how the math behind aerospace lightweighting actually works. Instead of relying on commercial black-box CAD software, this repository contains a modular, from-scratch Python engine implementing the **Solid Isotropic Material with Penalization (SIMP)** method combined with a custom Finite Element Method (FEM) solver.
 
+Engineered & Developed by Nabil Khondaker.
 ---
 
 ## 🛠 Directory Architecture
