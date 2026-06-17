@@ -40,7 +40,7 @@ TopologyOptimizationEngine/
 
 Most designers just click "Optimize" in Fusion 360 or ANSYS. This project pulls back the curtain on the actual solid mechanics:
 
-1. Objective Function (Compliance Minimization)
+**1. Objective Function (Compliance Minimization)**
    - The core goal is to find the optimal material density distribution $x$ that minimizes the global structural compliance $c$ (which maximizes stiffness), subject to a volume constraint:
 <img src="img/ObjFunction.png">
 Where:
@@ -49,14 +49,14 @@ Where:
 - xₑ is the pesudo-density of element e.
 - p is the SIMP penalization power (usually set to 3.0).
 - f is the targeted volume fraction constraint.
-2. SIMP Material Interpolation (The Power Law)
+**2. SIMP Material Interpolation (The Power Law)**
   - To force a binary "solid or void" structure, the Young's Modulus E of each element is penalized based on its density variable xₑ:
 <img src="img/SIMPMaterialInter.png">
 By raising xₑ to the power of p, intermediate densities (like xₑ = 0.5) provide very little stiffness relative to their weight. This forces the optimization loop to push elements toward either absolute solid (1) or empty space (0).
-3. Finite Element System Linear Equation
+**3. Finite Element System Linear Equation**
   - At each optimization iteration, the global static equilibrium equation is solved using high-performance sparse matrix manipulation:
 <img src="img/FiniteElementSLE.png">
-4. Sensitivity Analysis & Filtering
+**4. Sensitivity Analysis & Filtering**
   - The gradient of compliance with respect to element densities is calculated to guide the optimizer on where to add or remove material:
 <img src="img/SensAnalysisFilt.png">
   - To eliminate the physical artifact of "checkerboarding" (where the mesh creates alternating solid and empty squares), a mesh-independency spatial filter is applied to the raw sensitivities across a localized radius rₘᵢₙ:
