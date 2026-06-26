@@ -5,6 +5,16 @@ Built a 2D generative design engine from scratch to figure out how the math behi
 Engineered & Developed by Nabil Khondaker.
 ---
 
+<details>
+<summary>Contents</summary>
+
+- [🛠 Directory Structure](#-directory-architecture)
+- [🧠 The Engineering Core](#-the-engineering-core-how-it-works)
+- [🚀 Getting Started](#-getting-started)
+- [📊 Expected Output](#-expected-output)
+
+</details>
+
 ## 🛠 Directory Architecture
 
 This engine is architected using enterprise-grade modular principles to decouple global configurations, mesh generation, finite element solvers, and mathematical optimization filters.
