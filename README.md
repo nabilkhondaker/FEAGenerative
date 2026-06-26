@@ -6,7 +6,7 @@ Engineered & Developed by Nabil Khondaker.
 ---
 
 <details>
-<summary>Contents</summary>
+<summary><b>Contents</b></summary>
 
 - [🛠 Directory Structure](#-directory-architecture)
 - [🧠 The Engineering Core](#-the-engineering-core-how-it-works)
