@@ -83,7 +83,7 @@ Ensure you have Python 3.8+ installed on your system. This engine relies on high
 
 1. **Clone the repository:**
    ```bash
-   git clone [https://github.com/yourusername/OpenSIMP-Engine.git](https://github.com/yourusername/OpenSIMP-Engine.git)
+   git clone https://github.com/nabilkhondaker/FEAGenerative.git
    cd OpenSIMP-Engine
    ```
 2. **Set up a virtual environment (Highly recommended):**
