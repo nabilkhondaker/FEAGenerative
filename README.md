@@ -64,7 +64,7 @@ Where:
 <img src="img/SIMPMaterialInter.png">
 By raising xₑ to the power of p, intermediate densities (like xₑ = 0.5) provide very little stiffness relative to their weight. This forces the optimization loop to push elements toward either absolute solid (1) or empty space (0).
 𝟯. 𝗙𝗶𝗻𝗶𝘁𝗲 𝗘𝗹𝗲𝗺𝗲𝗻𝘁 𝗦𝘆𝘀𝘁𝗲𝗺 𝗟𝗶𝗻𝗲𝗮𝗿 𝗘𝗾𝘂𝗮𝘁𝗶𝗼𝗻
-  - At each optimization iteration, the global static equilibrium equation is solved using high-performance sparse matrix manipulation:
+  - At each optimization iteration, the global static equilibrium equation is solved by assembling and solving the global stiffness matrix as a sparse system:
 <img src="img/FiniteElementSLE.png">
 𝟰. 𝗦𝗲𝗻𝘀𝗶𝘁𝗶𝘃𝗶𝘁𝘆 𝗔𝗻𝗮𝗹𝘆𝘀𝗶𝘀 & 𝗙𝗶𝗹𝘁𝗲𝗿𝗶𝗻𝗴
   - The gradient of compliance with respect to element densities is calculated to guide the optimizer on where to add or remove material:
@@ -77,7 +77,7 @@ By raising xₑ to the power of p, intermediate densities (like xₑ = 0.5) prov
 ## 🚀 Getting Started
 
 ### 📋 Prerequisites
-Ensure you have Python 3.8+ installed on your system. This engine relies on high-performance numerical and visualization libraries.
+Ensure you have Python 3.8+ installed on your system. This engine uses NumPy and SciPy for numerical computation and Matplotlib for visualization.
 
 ### 📥 Installation
 
@@ -115,7 +115,7 @@ BEGINNING ITERATIVE SOLVER...
 
 OPTIMIZATION CONVERGED SUCCESSFULLY.
 ```
-Simultaneously, a live graphic window will pop up showing an initial uniform grey block morphing organically into an idealized, lightweight, high-stiffness cantilever truss.
+Simultaneously, a live graphic window will pop up showing the initial uniform material distribution gradually converging toward an optimized cantilever topology.
 ---
 
 ## 📄 License
