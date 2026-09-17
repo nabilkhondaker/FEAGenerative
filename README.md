@@ -17,7 +17,7 @@ Engineered & Developed by Nabil Khondaker.
 
 ## 🛠 Directory Architecture
 
-This engine is architected using enterprise-grade modular principles to decouple global configurations, mesh generation, finite element solvers, and mathematical optimization filters.
+The engine is split into separate layers for configuration, mesh generation, finite element solving, and topology optimization, so each part of the optimization pipeline can be developed independently.
 
 ```text
 FEAGenerative/
